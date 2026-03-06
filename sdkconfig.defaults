@@ -1,0 +1,15 @@
+# --- Arduino autostart (provides app_main -> setup/loop bridge) ---
+CONFIG_AUTOSTART_ARDUINO=y
+
+# --- Flash size (match board: 32MB) ---
+CONFIG_ESPTOOLPY_FLASHSIZE_32MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="32MB"
+
+# --- PSRAM (16MB octal) ---
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_BOOT_INIT=y
+
+# --- FreeRTOS (required by Arduino) ---
+CONFIG_FREERTOS_HZ=1000
